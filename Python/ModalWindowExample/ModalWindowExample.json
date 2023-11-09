@@ -1,0 +1,31 @@
+{
+	"TabLabel": "A Tool Launch Modal",
+	"InitTabSize": [400, 250],
+	"InitTabPosition": [200, 100],
+    "InitPyCmd": "import ModalWindowExample, importlib; importlib.reload(ModalWindowExample); Chameleon_SomeTool = ModalWindowExample.ModalWindowExample.ModalWindowExample(%JsonPath)",
+    "Root": {
+        "SVerticalBox":
+        {
+            "Slots": [
+                {
+                    "HAlign": "Center",
+                    "VAlign": "Center",
+                    "STextBlock":
+                    {
+                        "Text": "This is a normal Chameleon Tool"
+                    }
+                },
+                {
+                    "SButton":
+                    {
+                        "Text": "Launch Modal Window",
+                        "HAlign": "Center",
+                        "VAlign": "Center",
+                        "ContentPadding": 4,
+                        "OnClick": "unreal.ChameleonData.modal_window('./ModalWindowExample/AModalWindow.json')"
+                    }
+                }
+            ]
+        }
+    }
+}
